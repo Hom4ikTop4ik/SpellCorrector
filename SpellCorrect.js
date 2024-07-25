@@ -27,7 +27,7 @@ flag = 0;
 // обработчик нажатия на клавиши [ мой :) ]
 document.addEventListener('keyup', function (e) {
   // если отжат пробел или энтер
-  if ((e.ctrlKey) && (e.keyCode == 13))
+  if (/*(e.ctrlKey) &&*/ (e.keyCode == 13))
     flag = 0;
 });
 
@@ -35,7 +35,7 @@ document.addEventListener('keyup', function (e) {
 // обработчик нажатия на клавиши
 document.addEventListener('keydown', function (e) {
   // если нажат пробел или энтер
-  if ((flag == 0) && (e.ctrlKey) && (e.keyCode == 13)) 
+  if ((flag == 0) && /*(e.ctrlKey) &&*/ (e.keyCode == 13)) 
   {
     // флаг, чтоб при зажатии клавиш не было кучи запросов
     flag = 1;
